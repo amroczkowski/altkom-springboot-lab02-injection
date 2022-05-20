@@ -1,0 +1,16 @@
+GET http://localhost:8080/app/injection/property
+###
+GET http://localhost:8080/app/injection/setter
+###
+GET http://localhost:8080/app/injection/constructor
+###
+GET http://localhost:8080/app/injection/qualifier/property
+###
+GET http://localhost:8080/app/injection/qualifier/setter
+###
+GET http://localhost:8080/app/injection/qualifier/constructor
+###
+GET http://localhost:8080/app/injection/byName/constructor
+###
+GET http://localhost:8080/app/injection/primary/constructor
+###
