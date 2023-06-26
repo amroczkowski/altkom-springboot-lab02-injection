@@ -1,28 +1,24 @@
 package pl.altkom.springboot.lab02.injection.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pl.altkom.springboot.lab02.injection.service.BaseService;
+import lombok.RequiredArgsConstructor;
+import pl.altkom.springboot.lab02.injection.service.TestService;
 
-@RequestMapping("/injection/qualifier")
+@RequiredArgsConstructor
+@RequestMapping("/injection")
 @RestController
-public class Test2QualifierInjectionController {
+public class SimpleInjectionController {
 
     @Autowired
-    @Qualifier("test1Service")
-    private BaseService propertyService;
+    private TestService propertyService;
 
-    private BaseService setterService;
+    private TestService setterService;
 
-    private final BaseService constructorService;
-
-    public Test2QualifierInjectionController(@Qualifier("test1Service") final BaseService constructorService) {
-        this.constructorService = constructorService;
-    }
+    private final TestService constructorService;
 
     @GetMapping("/property")
     public String propertyInjectionTest() {
@@ -40,8 +36,7 @@ public class Test2QualifierInjectionController {
     }
 
     @Autowired
-    @Qualifier("test1Service")
-    public void setSetterService(final BaseService setterService) {
+    public void setSetterService(final TestService setterService) {
         this.setterService = setterService;
     }
 }

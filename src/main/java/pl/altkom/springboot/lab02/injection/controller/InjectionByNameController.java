@@ -8,11 +8,11 @@ import pl.altkom.springboot.lab02.injection.service.BaseService;
 
 @RequestMapping("/injection/byName")
 @RestController
-public class Test3ByNameInjectionController {
+public class InjectionByNameController {
 
     private final BaseService constructorService;
 
-    public Test3ByNameInjectionController(final BaseService test1Service) {
+    public InjectionByNameController(final BaseService test1Service) {
         this.constructorService = test1Service;
     }
 
