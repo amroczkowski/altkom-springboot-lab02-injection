@@ -14,3 +14,4 @@ GET http://localhost:8080/app/injection/byName/constructor
 ###
 GET http://localhost:8080/app/injection/primary/constructor
 ###
+GET http://localhost:8080/app/injection/collection
