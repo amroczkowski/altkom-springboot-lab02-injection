@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pl.altkom.springboot.lab02</groupId>
 	<artifactId>injection</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>injection</name>
 	<description>Dependency Injection</description>
 	<properties>
