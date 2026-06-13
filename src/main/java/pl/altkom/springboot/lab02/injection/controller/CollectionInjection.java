@@ -17,7 +17,8 @@ public class CollectionInjection {
     private final Collection<Product> products;
 
     @GetMapping
-    public void test() {
+    public Collection<Product> test() {
         products.forEach(product -> System.out.println(product.getName() + ": " + product.getPrice()));
+        return products;
     }
 }
